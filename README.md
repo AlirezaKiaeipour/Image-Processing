@@ -24,6 +24,6 @@
   ![Screenshot (135)](https://user-images.githubusercontent.com/88143329/139416662-51b91fa0-5be0-437e-b7aa-10ab7c12c956.png)
   
   
-  - [x] Draw a black condolence ribbon to customize the image of a person.
+- [x] Draw a black condolence ribbon to customize the image of a person.
 
    ![Screenshot (136)](https://user-images.githubusercontent.com/88143329/139416857-be196017-7e42-41fa-aa2c-5a9701314470.png)
