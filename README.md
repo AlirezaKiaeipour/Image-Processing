@@ -21,8 +21,8 @@
   
 - [x] Write an algorithm that takes Image 4 and separates the wolf from the image.
 
-  ![Screenshot (135)](https://user-images.githubusercontent.com/88143329/139416662-51b91fa0-5be0-437e-b7aa-10ab7c12c956.png)
-  
+  ![Screenshot (137)](https://user-images.githubusercontent.com/88143329/139534604-98acd361-5de0-4f9d-aa2b-a0de067e3c15.png)
+
   
 - [x] Draw a black condolence ribbon to customize the image of a person.
 
