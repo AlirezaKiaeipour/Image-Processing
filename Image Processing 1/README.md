@@ -25,3 +25,13 @@
 - [x] Draw a black condolence ribbon to customize the image of a person.
 
    ![Screenshot (136)](https://user-images.githubusercontent.com/88143329/139416857-be196017-7e42-41fa-aa2c-5a9701314470.png)
+
+
+- [x] For an image, create a gradient using white and black.
+
+  ![Screenshot (140)](https://user-images.githubusercontent.com/88143329/139578361-576f4d10-f678-423c-990b-bda299a6926e.png)
+  
+  
+- [x] Design the first character of the name with opencv.
+
+  ![Screenshot (139)](https://user-images.githubusercontent.com/88143329/139578463-b4daac5c-442d-4d9f-ac8b-016280bf1fd5.png)
