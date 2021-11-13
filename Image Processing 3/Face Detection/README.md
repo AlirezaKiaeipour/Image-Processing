@@ -11,7 +11,7 @@
 - [x] Pixelate Face
 
 
-- [x] Flip
+- [x] Flip effect
 
 
-- [x] Paint
+- [x] Paint effect
