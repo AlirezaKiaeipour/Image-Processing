@@ -176,7 +176,7 @@ if __name__ == '__main__':
 
     cap = cv2.VideoCapture(0)
     format = cv2.VideoWriter_fourcc(*"XVID")
-    save = cv2.VideoWriter("output/video.mp4",format,20.0,(640, 480))
+    save = cv2.VideoWriter("video.mp4",format,20.0,(640, 480))
     while True:
         ret , frame = cap.read()
         boxes, scores = fd.inference(frame)
@@ -214,7 +214,7 @@ if __name__ == '__main__':
 
             warp_effect(frame,landmark_left_eye,1,2)
             warp_effect(frame,landmark_right_eye,1,2)
-            if 2 <= y1-y2 <=15:
+            if 5 <= y1-y2 <=15:
                 warp_effect(frame,landmark_lips,1,2)
             if 16<= y1-y2 <=27:
                 warp_effect(frame,landmark_lips,1.5,3)
