@@ -29,6 +29,9 @@
 - [x] Color Detection using convolution
 
 
+- [x] High Contrast using EqualizeHist
+
+
 - [x] Color Detection using filter2d
 
 
