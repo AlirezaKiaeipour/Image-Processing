@@ -7,13 +7,14 @@ while True:
     _,frame = cap.read()
     frame = cv.resize(frame,(600,600))
     frame = cv.cvtColor(frame,cv.COLOR_BGR2GRAY)
+    frame = cv.equalizeHist(frame)
     row ,col = frame.shape
 
     resualt = cv.filter2D(frame,0,mask)
     frame_rectangle = frame[row//2:row//2+100,col//2:col//2+100]
     cv.rectangle(resualt,(row//2,col//2),(row//2+100,col//2+100),(0,255,0),4)
     resualt[row//2:row//2+100,col//2:col//2+100] = frame_rectangle
-
+    
     mean_color = int(np.mean(frame_rectangle))
     if mean_color <=80:
         color = "Black"

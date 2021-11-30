@@ -1,5 +1,6 @@
 import cv2
 import cvzone
+import numpy as np
 
 class Face_detection():
     def __init__(self):
@@ -16,9 +17,10 @@ class Face_detection():
             cv2.putText(self.frame,'Emoji on my face:   1',(15,20),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
             cv2.putText(self.frame,'Emoji on my lips & eyes:   2',(15,50),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
             cv2.putText(self.frame,'Pixelate my face:   3',(15,80),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
-            cv2.putText(self.frame,'Flip:   4',(15,110),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
-            cv2.putText(self.frame,'Paint my:   5',(15,140),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
-            cv2.putText(self.frame,'Exit:   6',(15,170),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
+            cv2.putText(self.frame,'Blur my face:   4',(15,110),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
+            cv2.putText(self.frame,'Flip:   5',(15,140),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
+            cv2.putText(self.frame,'Paint my:   6',(15,170),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
+            cv2.putText(self.frame,'Exit:   7',(15,200),cv2.FONT_HERSHEY_SIMPLEX,0.5, (0, 255, 255),2,cv2.LINE_4)
 
             self.key = cv2.waitKey(1)
             if self.key==ord("1") or self.flag==1:
@@ -27,11 +29,13 @@ class Face_detection():
                 self.emoji_eyes()
             if self.key==ord("3") or self.flag==3:
                 self.pixelate_face()
-            if self.key==ord("4") or self.flag==4:
+            if self.key==ord("4") or self.flag==6:
+                self.blur_face()
+            if self.key==ord("5") or self.flag==4:
                 self.flip()
-            if self.key==ord("5") or self.flag==5:
+            if self.key==ord("6") or self.flag==5:
                 self.paint()
-            if self.key==ord("6"):
+            if self.key==ord("7"):
                 break
             cv2.imshow("Webcam",self.frame)
 
@@ -79,6 +83,19 @@ class Face_detection():
             output = cv2.resize(pixlate, (w, h), interpolation=cv2.INTER_NEAREST)
             self.frame[y:y+h,x:x+w] = output
             return self.frame
+
+    def blur_face(self):
+        self.flag = 6
+        mask = np.ones((9*9)) / 81
+        faces = self.face_detector.detectMultiScale(self.frame , 1.3, minNeighbors=5)
+        for face in faces:
+            x, y, w, h = face
+            # cv2.rectangle(frame,(x,y),(x+w,y+h),(255,255,255),4)
+            blur = self.frame[y:y+h,x:x+w]
+            output = cv2.filter2D(blur,-1,mask)
+            self.frame[y:y+h,x:x+w] = output
+            return self.frame
+
         
     def flip(self):
         self.flag = 4
