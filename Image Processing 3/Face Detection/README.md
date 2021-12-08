@@ -22,4 +22,7 @@
   ![Screenshot (31)](https://user-images.githubusercontent.com/88143329/142193941-1f0e6360-07f8-44a2-9a4a-999abd900215.png)
   
   
+- [x] Blur Face uing Filter2d
+
+
 - [x] Flip effect
