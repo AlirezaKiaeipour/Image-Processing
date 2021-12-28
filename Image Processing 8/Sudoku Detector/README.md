@@ -10,7 +10,7 @@
   ## RUN
   You can run Sudoku_detector.py with the following command
 
-  `python Sudoku_detector.py --input "Image Name" --save "File Name"`                              
+  `python Sudoku_detector.py [--input "Image Name"] [--save "File Name"]`                              
    `Example: python Sudoku_detector.py --input sudoku.jpg --save resualt_sudoku.jpg`
   
   
