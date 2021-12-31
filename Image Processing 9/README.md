@@ -4,7 +4,7 @@
 
   - Microsoft Logo design using opencv
 
-  ![2021-12-31_20-04-57](https://user-images.githubusercontent.com/88143329/147833219-2d18c955-434f-4234-90b3-7559c9949034.png)
+    ![2021-12-31_20-04-57](https://user-images.githubusercontent.com/88143329/147833219-2d18c955-434f-4234-90b3-7559c9949034.png)
 
 
 
