@@ -1,3 +1,3 @@
-# Image-Processing-Course
+# Image-Processing
 
 
